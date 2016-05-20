@@ -94,7 +94,7 @@ public class GameHandler : MonoBehaviour {
 				coolDownTime = 0.5f;
 				blinkTimes++;
 
-				if (blinkTimes < buttons.Count ) 
+				if (blinkTimes < buttons.Count*2 ) 
 					{
 					m_uiText.text = "Follow blinks" + blinkTimes;
 					blinkButton = Random.Range (0, buttons.Count);
