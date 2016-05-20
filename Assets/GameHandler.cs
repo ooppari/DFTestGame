@@ -160,8 +160,14 @@ public class GameHandler : MonoBehaviour {
 				buttonsOrderGenerated.Clear();
 				buttonsOrderGenerated = new ArrayList ();
 				userPressToCheck = 0;
+				int rounds = buttons.Count - 3;
+				for (int i = 0; i < rounds; i++) 	
+					{
+					GameObject buttonToDest =(GameObject) buttons [buttons.Count - 1];
+					buttons.RemoveAt( buttons.Count-1);
+					Destroy (buttonToDest);
+					}
 				}
-
 			}
 		}
 	}
